@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @article.title %></h1>
+  <p><%= @article.content %></p>
+  <div class="d-flex">
+    <p>is it done?</p>
+  </div>
+  <%= link_to "Back to articles", articles_path %>
+  <%= link_to ">>edit article", edit_article_path %>
+</div>

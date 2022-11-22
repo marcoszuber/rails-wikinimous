@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>articles</h1>
+  <% @articles.each do |article| %>
+    <ul class="list-group">
+      <li class="list-group">
+        <div class="d-flex">
+          <%= link_to article.title, article_path(article) %>
+          <%= link_to ">>delete article", article_path(article), data: {turbo_method: :delete, turbo_confirm: "estas seguro que deseas eliminar esta tarea?"} %>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+  <%= link_to ">>new article", new_article_path %>
+</div>
